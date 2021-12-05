@@ -1,3 +1,5 @@
+export const a = "a";
+
 const ipt2a = Deno.readTextFileSync("./input.txt")
   .split("\n")
   .map((x) => ({ dir: x.split(" ")[0], amt: parseInt(x.split(" ")[1]) }));

@@ -1,16 +1,6 @@
-const ipt3b =  //Deno.readTextFileSync("./input.txt")
-`00100
-11110
-10110
-10111
-10101
-01111
-00111
-11100
-10000
-11001
-00010
-01010`
+export const a = "a";
+
+const ipt3b = Deno.readTextFileSync("./input.txt")
   .split("\n")
   .map((x) => x.split("").map((y) => parseInt(y)));
 

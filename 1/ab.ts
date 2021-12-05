@@ -1,3 +1,5 @@
+export const a = "a";
+
 const ipt = Deno.readTextFileSync("./input.txt")
   .split("\n")
   .map((x) => Number(x));

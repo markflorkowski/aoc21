@@ -1,3 +1,5 @@
+export const a = "a";
+
 const ipt3a = Deno.readTextFileSync("./input.txt")
   .split("\n")
   .map((x) => x.split("").map((y) => parseInt(y)));
