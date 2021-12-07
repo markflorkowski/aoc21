@@ -23,7 +23,7 @@ const age = (list: number[]) => {
 };
 
 let cur = ipt;
-let days = 80;
+const days = 80;
 for (let i = 0; i < days; i++) {
   cur = age(cur);
 }

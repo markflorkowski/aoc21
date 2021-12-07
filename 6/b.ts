@@ -6,7 +6,7 @@ const ipt = Deno.readTextFileSync("./input.txt")
 
 //console.log(ipt);
 
-let counts = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+const counts = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 ipt.forEach((p) => {
   counts[p] = counts[p] + 1;
