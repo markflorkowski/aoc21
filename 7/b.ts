@@ -10,7 +10,7 @@ const average = (array: number[]) =>
 const avg = Math.floor(average(ipt));
 
 const cost = (x: number, r: number) => {
-  let steps = Math.abs(r - x);
+  const steps = Math.abs(r - x);
   return (steps * (steps + 1)) / 2;
 };
 
