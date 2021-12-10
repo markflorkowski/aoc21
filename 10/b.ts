@@ -26,7 +26,7 @@ const calcScore = (arr: string[]) => {
 };
 
 const sArr: number[] = [];
-ipt.forEach((row, j) => {
+ipt.forEach((row) => {
   let isV = true;
   const valid = [row[0]];
 

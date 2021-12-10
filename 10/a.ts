@@ -12,7 +12,7 @@ const close = ["}", "]", ")", ">"];
 const scores = [1197, 57, 3, 25137];
 
 let sum = 0;
-ipt.forEach((row, j) => {
+ipt.forEach((row) => {
   const valid = [row[0]];
 
   for (let i = 1; i < row.length; i++) {
