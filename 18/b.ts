@@ -13,7 +13,7 @@ const canSplit = (arr: NArray<number>) => {
 const split = (arr: NArray<number>): NArray<number> => {
   const strArr = JSON.stringify(arr);
 
-  const parts: any[] = [];
+  const parts: string[] = [];
 
   let i = 0;
   while (i < strArr.length) {
@@ -40,10 +40,10 @@ const split = (arr: NArray<number>): NArray<number> => {
   }
 
   for (let j = 0; j < parts.length; j++) {
-    if (!isNaN(parts[j]) && parseInt(parts[j]) >= 10) {
+    if (!isNaN(+parts[j]) && parseInt(parts[j]) >= 10) {
       parts[j] = JSON.stringify([
-        Math.floor(parts[j] / 2),
-        Math.ceil(parts[j] / 2),
+        Math.floor(+parts[j] / 2),
+        Math.ceil(+parts[j] / 2),
       ]);
       break;
     }
@@ -70,7 +70,7 @@ const canExplode = (arr: NArray<number>): boolean => {
 
 const explode = (arr: NArray<number>): NArray<number> => {
   const strArr = JSON.stringify(arr);
-  let parts: any[] = [];
+  let parts: string[] = [];
 
   let i = 0;
   while (i < strArr.length) {
@@ -109,9 +109,9 @@ const explode = (arr: NArray<number>): NArray<number> => {
         let leftI = -1;
         let rightI = -1;
         for (let j = 0; j < parts.length; j++) {
-          if (!isNaN(parts[j]) && j < i) {
+          if (!isNaN(+parts[j]) && j < i) {
             leftI = j;
-          } else if (!isNaN(parts[j]) && j > i + 3 && rightI == -1) {
+          } else if (!isNaN(+parts[j]) && j > i + 3 && rightI == -1) {
             rightI = j;
           }
         }
