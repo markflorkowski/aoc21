@@ -40,7 +40,7 @@ const getPixelValue = (img: string[], x: number, y: number) => {
   return parseInt(value, 2);
 };
 
-let ip = padImg(im, 200);
+let ip = padImg(im, 50);
 let i2: string[] = [];
 
 let count = 0;
