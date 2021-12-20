@@ -176,7 +176,6 @@ for (let first = 0; first < ipt.length - 1; first++) {
     while (last !== reduce(last)) {
       last = reduce(last);
     }
-
     mags.push(magnitude(last));
   }
 }
