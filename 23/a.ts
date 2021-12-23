@@ -65,7 +65,7 @@ const f = (lines: string[][]) => {
       const emptyCount = countOcc(rooms[dest], "");
 
       const newRoom = [
-        ...new Array(emptyCount - 1 < 0 ? 0 : emptyCount - 1).fill(""),
+        ...new Array(emptyCount - 1).fill(""),
         ...new Array(roomSize - emptyCount + 1).fill(square),
       ];
 
