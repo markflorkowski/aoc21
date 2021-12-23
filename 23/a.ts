@@ -45,7 +45,7 @@ const f = (lines: string[][]) => {
       if (square === "") return;
 
       const dest = destination[square];
-      let canMove = rooms[dest].some((roommate) => {
+      let canMove = rooms[dest].every((roommate) => {
         return roommate === "" || roommate === square; // can only move to room with like roommate, or empty
       });
 
